@@ -1,0 +1,117 @@
+{
+  "project": {
+    "name": "你造吗",
+    "path": "/workspace/ni-zao-ma",
+    "operation": "create",
+    "deviceType": "desktop",
+    "language": "zh-CN",
+    "dashboardMode": false,
+    "replicationMode": null,
+    "sourceUrl": null,
+    "visualSpecExcerpt": null,
+    "styleDefinitionBrief": "Playful AI product landing page with orange brand, rounded shapes, toy-like cards, energetic typography",
+    "designRead": "Product showcase landing / creative competition judges / playful energetic / medium-low density / avoid corporate/minimal aesthetic",
+    "designDials": {
+      "layoutVariance": 4,
+      "motionIntensity": 3,
+      "visualDensity": 2
+    },
+    "styleContinuityAnchors": {
+      "colorSystem": {
+        "primaryColorRole": "Orange #FF6B00 as brand hero, warm yellow #FFB800 as accent",
+        "brandHuePolicy": "Single orange hue; accents use non-brand warm tones for variety",
+        "stateColors": "semantic green/amber/red/blue for status indicators"
+      },
+      "shapeSystem": "Rounded, playful — large border-radius (10-28px), pill buttons, soft card edges",
+      "typographySystem": "Nunito display + Inter body, CJK fallback PingFang SC / Microsoft YaHei",
+      "spacingSystem": "Generous whitespace, 48-96px section padding",
+      "componentLanguage": "Rounded cards, pill tags, gradient buttons, emoji accents",
+      "surfaceAndDepth": "Light borders + subtle shadows (alpha ≤ 0.08), no heavy elevation",
+      "imageryAndIconography": "Gradient blob backgrounds, playful illustrations, emoji as decorative elements",
+      "interactionTone": "Bouncy hover effects, smooth transitions, warm micro-interactions"
+    },
+    "sharedProjectShellContract": {
+      "navigationShell": "No persistent nav — single-page scroll experience with logo in hero",
+      "primaryColorSystem": "Orange #FF6B00 primary, warm yellow #FFB800 secondary accent",
+      "typographySystem": "Nunito bold for headings, Inter for body, CJK PingFang SC fallback",
+      "radiusScale": "sm:6 md:10 lg:14 xl:20 2xl:28 full:9999",
+      "surfaceDepthModel": "Light border + subtle shadow, no deep elevation",
+      "ctaStyle": "Rounded pill buttons with orange gradient, white text, glow shadow on hover",
+      "alignmentRules": "Center-aligned hero, card grids with consistent gutters"
+    },
+    "generationTree": null,
+    "specsConstraints": null
+  },
+  "designSource": {
+    "operatingMode": "free-explore",
+    "libraryIdentity": null,
+    "libraryPath": null,
+    "cssFilePath": "/workspace/ni-zao-ma/colors_and_type.css",
+    "brandPrefix": "",
+    "themeMode": "light",
+    "designDecisionSummary": "Playful orange-driven brand with rounded shapes and energetic typography",
+    "componentContractKind": null,
+    "forbiddenInventedComponents": [],
+    "allowedComponents": [],
+    "styleConstraints": {
+      "radiusMax": 28,
+      "spacingBase": 1,
+      "fontSizeBody": 16,
+      "fontSizeMin": 12,
+      "controlHeightDefault": 40,
+      "controlHeightLarge": 48
+    },
+    "productContext": {
+      "kitType": "creative-competition",
+      "productType": "AI IP creation tool"
+    },
+    "actualTokenNameReference": [
+      { "semanticPurpose": "Primary brand color", "tokenName": "--color-primary" },
+      { "semanticPurpose": "Primary background tint", "tokenName": "--color-primary-bg" },
+      { "semanticPurpose": "Text on primary", "tokenName": "--color-text-on-primary" },
+      { "semanticPurpose": "Display font", "tokenName": "--font-display" },
+      { "semanticPurpose": "Body font", "tokenName": "--font-body" }
+    ]
+  },
+  "pages": [
+    {
+      "nodeId": "page-landing",
+      "slug": "landing",
+      "title": "创意展示页",
+      "htmlSrc": "pages/landing.html",
+      "pageIndex": 1,
+      "stateGroupId": null,
+      "stateRole": null,
+      "baseStatePageId": null,
+      "sharedShellContract": [],
+      "mutableRegions": [],
+      "derivedFromHtmlSrc": null,
+      "derivationType": "original",
+      "sourcePageId": null,
+      "sourceHtmlSrc": null,
+      "pageType": "showcase",
+      "businessScenario": "TRAE AI competition creative submission — show product concept, features, and value",
+      "visualNorthStar": "Energetic, warm, and playful — orange gradients with soft rounded shapes, feels like a creative toy store, not a corporate SaaS",
+      "compositionPattern": "Stacked narrative: hero → problem → solution showcase → feature cards → value statement → CTA",
+      "continuityAnchors": ["orange gradient hero", "pill-shaped CTAs", "rounded card corners", "Nunito bold headings"],
+      "libraryRestraintMode": false,
+      "uiKitPath": null,
+      "componentPlan": [],
+      "imagePlan": ["hero-visual.jpg"],
+      "chartsRequired": false,
+      "miniProgramStyle": false,
+      "qualityRisks": ["long CJK text blocks need careful line-height"]
+    }
+  ],
+  "assets": [
+    {
+      "filename": "hero-visual.jpg",
+      "role": "critical-hero",
+      "owningPage": "landing",
+      "semanticDescription": " playful AI tool hero illustration with orange tones",
+      "status": "generated"
+    }
+  ],
+  "wiringPlan": [],
+  "hiddenInteractionPlan": []
+}

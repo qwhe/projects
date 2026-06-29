@@ -1,0 +1,26 @@
+{
+  "data": [
+    {
+      "id": "page-landing",
+      "title": "创意展示页",
+      "type": "page",
+      "version": 1,
+      "createdAt": 1750896000000,
+      "canvasData": {
+        "x": 24,
+        "y": 24,
+        "group": 0
+      },
+      "devMetadata": {
+        "htmlSrc": "pages/landing.html",
+        "interactions": []
+      }
+    }
+  ],
+  "config": {
+    "autoLayout": false,
+    "deviceType": "desktop",
+    "projectName": "你造吗",
+    "designLibrary": null
+  }
+}
