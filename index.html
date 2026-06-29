@@ -254,9 +254,9 @@
         margin-bottom: var(--space-xl);
       }
       .logo-badge img {
-        height: 120px;
-        filter: brightness(0) invert(1);
-        mix-blend-mode: screen;
+        height: 100px;
+        border-radius: var(--radius-lg);
+        box-shadow: 0 4px 24px rgba(0,0,0,0.2);
       }
 
       /* ── Hero decorative tagline pill ── */
@@ -849,6 +849,30 @@
       </div>
 
       <!-- ════════════════════════════════════════ -->
+      <!--  Stats Bar: Numbers that impress          -->
+      <!-- ════════════════════════════════════════ -->
+      <section style="background:var(--color-bg);position:relative;z-index:1;" class="py-12 md:py-16">
+        <div style="max-width:1000px;margin:0 auto;" class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="section-animate">
+            <div style="font-size:2.5rem;font-weight:900;color:var(--color-primary);line-height:1;">1 张</div>
+            <div style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:6px;font-weight:600;">照片即可开始</div>
+          </div>
+          <div class="section-animate delay-1">
+            <div style="font-size:2.5rem;font-weight:900;color:var(--color-primary);line-height:1;">6+</div>
+            <div style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:6px;font-weight:600;">种 IP 资产类型</div>
+          </div>
+          <div class="section-animate delay-2">
+            <div style="font-size:2.5rem;font-weight:900;color:var(--color-primary);line-height:1;">7+</div>
+            <div style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:6px;font-weight:600;">种创作风格可选</div>
+          </div>
+          <div class="section-animate delay-3">
+            <div style="font-size:2.5rem;font-weight:900;color:var(--color-primary);line-height:1;">∞</div>
+            <div style="font-size:var(--text-sm);color:var(--color-text-secondary);margin-top:6px;font-weight:600;">持续开造无限衍生</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════════════ -->
       <!--  Section 2: Problem Statement             -->
       <!-- ════════════════════════════════════════ -->
       <section style="background:var(--color-bg);position:relative;overflow:hidden;" class="section-padding">
@@ -1124,6 +1148,54 @@
           <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,40 1440,35 L1440,60 L0,60 Z" fill="#FFF8F2"/>
         </svg>
       </div>
+
+      <!-- ════════════════════════════════════════ -->
+      <!--  Gallery: Product Preview                  -->
+      <!-- ════════════════════════════════════════ -->
+      <section style="background:var(--color-bg);position:relative;overflow:hidden;" class="section-padding">
+        <div style="max-width:1100px;margin:0 auto;position:relative;z-index:1;">
+          <div style="text-align:center;margin-bottom:var(--space-3xl);">
+            <span class="section-label section-animate">SHOWCASE</span>
+            <h2 class="section-animate delay-1" style="font-size:var(--text-4xl);font-weight:900;color:var(--color-text-primary);">
+              看看"造"出来的效果
+            </h2>
+            <p class="section-animate delay-2" style="font-size:var(--text-lg);color:var(--color-text-secondary);max-width:560px;margin:var(--space-md) auto 0;">
+              从一张照片出发，你能得到一整套视觉资产
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="section-animate delay-1" style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg);">
+              <img src="assets/mockup-stickers.jpg" alt="表情包贴纸" style="width:100%;display:block;">
+              <div style="padding:var(--space-md) var(--space-lg);background:var(--color-bg-elevated);">
+                <span style="font-weight:700;color:var(--color-text-primary);">😂 表情包贴纸</span>
+                <span style="color:var(--color-text-secondary);font-size:var(--text-sm);margin-left:var(--space-sm);">一键生成全套微信表情包</span>
+              </div>
+            </div>
+            <div class="section-animate delay-2" style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg);">
+              <img src="assets/mockup-merch.jpg" alt="周边衍生品" style="width:100%;display:block;">
+              <div style="padding:var(--space-md) var(--space-lg);background:var(--color-bg-elevated);">
+                <span style="font-weight:700;color:var(--color-text-primary);">📱 周边衍生品</span>
+                <span style="color:var(--color-text-secondary);font-size:var(--text-sm);margin-left:var(--space-sm);">帆布袋、手机壳、贴纸效果图</span>
+              </div>
+            </div>
+            <div class="section-animate delay-3" style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg);">
+              <img src="assets/mockup-card.jpg" alt="角色人设卡" style="width:100%;display:block;">
+              <div style="padding:var(--space-md) var(--space-lg);background:var(--color-bg-elevated);">
+                <span style="font-weight:700;color:var(--color-text-primary);">📋 角色人设卡</span>
+                <span style="color:var(--color-text-secondary);font-size:var(--text-sm);margin-left:var(--space-sm);">完整的角色档案与性格设定</span>
+              </div>
+            </div>
+            <div class="section-animate delay-4" style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg);">
+              <img src="assets/mockup-social.jpg" alt="社交封面" style="width:100%;display:block;">
+              <div style="padding:var(--space-md) var(--space-lg);background:var(--color-bg-elevated);">
+                <span style="font-weight:700;color:var(--color-text-primary);">🖼️ 社交封面</span>
+                <span style="color:var(--color-text-secondary);font-size:var(--text-sm);margin-left:var(--space-sm);">各平台专属头像与封面</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- ════════════════════════════════════════ -->
       <!--  Section 5: Who Is This For               -->
