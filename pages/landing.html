@@ -231,7 +231,7 @@
         align-items: center;
         justify-content: center;
         gap: var(--space-3xl);
-        max-width: 1100px;
+        max-width: 1200px;
         margin: 0 auto;
         width: 100%;
       }
@@ -241,12 +241,12 @@
         text-align: left;
       }
       .hero-visual-col {
-        flex: 1;
+        flex: 1.1;
         min-width: 0;
         position: relative;
       }
 
-      /* ── Logo pill badge ── */
+      /* ── Logo badge ── */
       .logo-badge {
         display: inline-flex;
         align-items: center;
@@ -254,9 +254,25 @@
         margin-bottom: var(--space-xl);
       }
       .logo-badge img {
-        height: 56px;
-        border-radius: var(--radius-lg);
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        height: 120px;
+        filter: brightness(0) invert(1);
+        mix-blend-mode: screen;
+      }
+
+      /* ── Hero decorative tagline pill ── */
+      .hero-tagline-pill {
+        display: inline-block;
+        background: rgba(255,255,255,0.2);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        color: #fff;
+        font-family: var(--font-body);
+        font-size: var(--text-base);
+        font-weight: var(--font-medium);
+        padding: 10px 24px;
+        border-radius: var(--radius-full);
+        border: 1px solid rgba(255,255,255,0.25);
+        margin-bottom: var(--space-lg);
       }
 
       /* ── Hero decorative blobs ── */
@@ -300,8 +316,9 @@
       }
       .hero-illustration img {
         width: 100%;
+        max-width: 520px;
         border-radius: var(--radius-2xl);
-        box-shadow: 0 20px 60px rgba(0,0,0,0.18), 0 0 0 4px rgba(255,255,255,0.15);
+        box-shadow: 0 24px 80px rgba(0,0,0,0.22), 0 0 0 6px rgba(255,255,255,0.18);
         object-fit: cover;
       }
 
@@ -324,22 +341,22 @@
       }
       .hero-sticker {
         position: absolute;
-        width: 64px;
-        height: 64px;
+        width: 80px;
+        height: 80px;
         border-radius: var(--radius-xl);
         background: rgba(255,255,255,0.95);
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 32px;
-        box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        font-size: 40px;
+        box-shadow: 0 8px 28px rgba(0,0,0,0.18);
         z-index: 2;
         pointer-events: none;
       }
-      .hero-sticker-1 { top: -12px; right: -16px; animation: float-sticker-1 3.5s ease-in-out infinite; }
-      .hero-sticker-2 { bottom: 40px; left: -20px; animation: float-sticker-2 4s ease-in-out infinite 0.5s; }
-      .hero-sticker-3 { top: 50%; right: -24px; animation: float-sticker-3 3s ease-in-out infinite 1s; }
-      .hero-sticker-4 { bottom: -8px; right: 20%; animation: float-sticker-4 3.8s ease-in-out infinite 0.3s; }
+      .hero-sticker-1 { top: -16px; right: -20px; animation: float-sticker-1 3.5s ease-in-out infinite; }
+      .hero-sticker-2 { bottom: 50px; left: -28px; animation: float-sticker-2 4s ease-in-out infinite 0.5s; }
+      .hero-sticker-3 { top: 50%; right: -32px; animation: float-sticker-3 3s ease-in-out infinite 1s; }
+      .hero-sticker-4 { bottom: -12px; right: 20%; animation: float-sticker-4 3.8s ease-in-out infinite 0.3s; }
 
       /* ── Hero CTA pill ── */
       .hero-cta {
@@ -351,7 +368,7 @@
         font-family: var(--font-display);
         font-weight: 800;
         font-size: var(--text-lg);
-        padding: 14px 36px;
+        padding: 16px 40px;
         border-radius: var(--radius-full);
         text-decoration: none;
         box-shadow: 0 4px 16px rgba(0,0,0,0.1);
@@ -371,9 +388,12 @@
           gap: var(--space-2xl);
         }
         .hero-text-col { text-align: center; order: 1; }
-        .hero-visual-col { order: 2; width: 100%; max-width: 400px; }
+        .hero-visual-col { order: 2; width: 100%; max-width: 420px; }
         .hero-sticker { display: none; }
         .hero-blob-1, .hero-blob-2, .hero-blob-3 { display: none; }
+        .logo-badge img {
+          height: 80px;
+        }
       }
 
       /* ── Section label tag ── */
@@ -391,15 +411,16 @@
         margin-bottom: var(--space-md);
       }
 
-      /* ── Colored card accent bars ── */
-      .accent-bar-coral { border-top: 4px solid var(--color-accent-coral); }
-      .accent-bar-amber { border-top: 4px solid var(--color-accent-warm); }
-      .accent-bar-mint { border-top: 4px solid var(--color-accent-mint); }
+      /* ── Card tint backgrounds with gradient ── */
+      .card-tint-warm { background: linear-gradient(145deg, #FFFBF5 0%, #FFF7ED 100%); }
+      .card-tint-mint { background: linear-gradient(145deg, #F0FDF9 0%, #ECFDF5 100%); }
+      .card-tint-lavender { background: linear-gradient(145deg, #FAF5FF 0%, #F5F3FF 100%); }
 
-      /* ── Card tint backgrounds ── */
-      .card-tint-warm { background: #FFFBF5; }
-      .card-tint-mint { background: #F0FDF9; }
-      .card-tint-lavender { background: #FAF5FF; }
+      /* ── Step card tints: warm / mint / lavender / sky ── */
+      .step-tint-warm { background: linear-gradient(145deg, #FFFBF5 0%, #FFF4EB 100%); }
+      .step-tint-mint { background: linear-gradient(145deg, #F0FDF9 0%, #D1FAE5 100%); }
+      .step-tint-lavender { background: linear-gradient(145deg, #FAF5FF 0%, #EDE9FE 100%); }
+      .step-tint-sky { background: linear-gradient(145deg, #F0F9FF 0%, #DBEAFE 100%); }
 
       /* ── Decorative blob ── */
       .deco-blob {
@@ -416,13 +437,33 @@
         background: var(--color-surface);
         border: 1px solid var(--color-border-light);
         border-radius: var(--radius-2xl);
-        padding: var(--space-2xl) var(--space-xl);
+        padding: 32px 32px;
         transition: transform var(--transition-base), box-shadow var(--transition-base);
         border-top: 4px solid transparent;
+        position: relative;
+        overflow: hidden;
       }
       .pain-card:hover {
         transform: translateY(-4px);
         box-shadow: var(--shadow-lg);
+      }
+      .pain-card-number {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        font-family: var(--font-display);
+        font-size: var(--text-2xl);
+        font-weight: 900;
+        opacity: 0.1;
+        line-height: 1;
+        color: var(--color-text-primary);
+      }
+      .pain-card-emoji {
+        font-size: 56px;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: var(--space-md);
+        display: block;
       }
 
       /* ── Step flow ── */
@@ -439,19 +480,23 @@
         box-shadow: var(--shadow-md);
       }
       .step-number {
-        width: 48px;
-        height: 48px;
+        width: 56px;
+        height: 56px;
         border-radius: var(--radius-full);
         background: linear-gradient(135deg, var(--color-primary), var(--color-accent-warm));
         color: var(--color-text-on-primary);
         font-family: var(--font-display);
         font-weight: 800;
-        font-size: 22px;
+        font-size: 24px;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        box-shadow: 0 4px 12px rgba(255, 107, 0, 0.25);
+        box-shadow: 0 4px 16px rgba(255, 107, 0, 0.3);
+      }
+      .step-emoji {
+        font-size: 28px;
+        line-height: 1;
       }
 
       /* ── Step connector with animated dash ── */
@@ -463,6 +508,7 @@
         align-items: center;
         flex-shrink: 0;
         gap: 0;
+        align-self: center;
       }
       .step-connector-line {
         width: 48px;
@@ -539,69 +585,80 @@
       .feature-card {
         border: 1px solid var(--color-border-light);
         border-radius: var(--radius-2xl);
-        padding: var(--space-2xl) var(--space-xl);
+        padding: 32px 24px 28px;
         text-align: center;
         transition: transform var(--transition-base), box-shadow var(--transition-base);
       }
       .feature-card:hover {
-        transform: translateY(-4px);
+        transform: translateY(-6px) scale(1.02);
         box-shadow: var(--shadow-glow-primary);
         border-color: var(--color-primary-light);
       }
-      .feature-emoji {
-        font-size: 48px;
+      .feature-icon-circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto var(--space-lg);
+        font-size: 40px;
         line-height: 1;
-        margin-bottom: var(--space-md);
-        display: block;
       }
+      .feature-icon-circle.circle-warm { background: linear-gradient(135deg, #FFF4EB, #FFE0C2); }
+      .feature-icon-circle.circle-coral { background: linear-gradient(135deg, #FFE8E8, #FFD4D4); }
+      .feature-icon-circle.circle-mint { background: linear-gradient(135deg, #E6FAF2, #B8F0D8); }
+      .feature-icon-circle.circle-lavender { background: linear-gradient(135deg, #F0EBFF, #DDD6FE); }
+      .feature-icon-circle.circle-sky { background: linear-gradient(135deg, #E0F2FE, #BAE6FD); }
+      .feature-icon-circle.circle-amber { background: linear-gradient(135deg, #FEF3C7, #FDE68A); }
 
       /* ── User type badges ── */
       .user-badge {
         background: var(--color-surface);
         border: 1px solid var(--color-border-light);
         border-radius: var(--radius-2xl);
-        padding: var(--space-2xl) var(--space-xl);
-        padding-left: var(--space-2xl);
-        text-align: center;
+        padding: 32px 24px;
+        text-align: left;
         transition: transform var(--transition-base), box-shadow var(--transition-base);
         position: relative;
         overflow: hidden;
-        border-left: 5px solid transparent;
+        border-left: 4px solid transparent;
       }
       .user-badge:hover {
-        transform: translateY(-3px) scale(1.02);
+        transform: translateY(-3px) scale(1.01);
         box-shadow: var(--shadow-md);
       }
+      .user-badge-emoji {
+        font-size: 40px;
+        line-height: 1;
+        margin-bottom: var(--space-md);
+        display: block;
+      }
 
-      /* ── Dev badges ── */
-      .dev-badge {
-        background: var(--color-primary-bg);
+      /* ── TRAE capability cards ── */
+      .trae-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border-light);
         border-radius: var(--radius-xl);
-        padding: var(--space-lg) var(--space-2xl);
-        display: inline-flex;
-        align-items: center;
-        gap: var(--space-md);
-        font-size: var(--text-base);
-        color: var(--color-text-secondary);
-        transition: transform var(--transition-base);
+        padding: 24px 28px;
+        text-align: left;
+        transition: transform var(--transition-base), box-shadow var(--transition-base);
       }
-      .dev-badge:hover {
+      .trae-card:hover {
         transform: translateY(-2px);
+        box-shadow: var(--shadow-md);
+      }
+      .trae-card-icon {
+        font-size: 32px;
+        line-height: 1;
+        margin-bottom: var(--space-sm);
+        display: block;
       }
 
-      /* ── Dot pattern background ── */
-      .dot-pattern {
-        background-image: radial-gradient(circle, var(--color-border-light) 1px, transparent 1px);
-        background-size: 24px 24px;
-      }
-
-      /* ── Feature decorative circles ── */
-      .feature-deco-circle {
-        position: absolute;
-        border-radius: 50%;
-        border: 2px solid var(--color-border-light);
-        pointer-events: none;
-        z-index: 0;
+      /* ── Dot-grid pattern for TRAE section ── */
+      .dot-grid-bg {
+        background-image: radial-gradient(circle, var(--color-border-light) 1.2px, transparent 1.2px);
+        background-size: 28px 28px;
       }
 
       /* ── CTA Button ── */
@@ -613,13 +670,14 @@
         color: var(--color-primary);
         font-family: var(--font-display);
         font-weight: 800;
-        font-size: var(--text-2xl);
-        padding: 20px 56px;
+        font-size: 20px;
+        padding: 18px 56px;
         border-radius: var(--radius-full);
         text-decoration: none;
         transition: transform var(--transition-base), box-shadow var(--transition-base);
         cursor: pointer;
         border: none;
+        min-height: 56px;
       }
       .cta-btn:hover {
         transform: scale(1.05);
@@ -637,46 +695,38 @@
       }
       .cta-float-1 {
         position: absolute;
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
         border-radius: 50%;
-        background: rgba(255,255,255,0.08);
-        top: 15%;
-        left: 8%;
+        background: rgba(255,255,255,0.1);
+        filter: blur(40px);
+        top: 12%;
+        left: 6%;
         animation: float-slow 5s ease-in-out infinite;
         pointer-events: none;
       }
       .cta-float-2 {
         position: absolute;
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
-        background: rgba(255,184,0,0.12);
-        bottom: 20%;
-        right: 10%;
+        background: rgba(255,184,0,0.18);
+        filter: blur(30px);
+        bottom: 18%;
+        right: 8%;
         animation: float-slow-alt 6s ease-in-out infinite;
         pointer-events: none;
       }
       .cta-float-3 {
         position: absolute;
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
-        background: rgba(255,255,255,0.06);
-        top: 60%;
-        left: 15%;
+        background: rgba(255,255,255,0.08);
+        filter: blur(24px);
+        top: 55%;
+        left: 18%;
         animation: float-slow 7s ease-in-out infinite 1s;
-        pointer-events: none;
-      }
-      .cta-float-4 {
-        position: absolute;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.07);
-        bottom: 10%;
-        left: 45%;
-        animation: float-slow-alt 8s ease-in-out infinite 0.5s;
         pointer-events: none;
       }
 
@@ -693,19 +743,24 @@
 
       /* ── Responsive helpers ── */
       @media (max-width: 767px) {
-        .hero-title { font-size: var(--text-4xl) !important; }
+        .hero-title { font-size: 2.5rem !important; }
         .step-connector-wrap { display: none !important; }
         .hero-blob-1, .hero-blob-2, .hero-blob-3 { display: none; }
         .hero-illustration img { border-radius: var(--radius-xl) !important; }
+        .pain-card { padding: 24px 20px; }
+        .pain-card-emoji { font-size: 44px; }
+        .feature-card { padding: 24px 20px; }
+        .feature-icon-circle { width: 64px; height: 64px; font-size: 32px; }
+        .user-badge { padding: 24px 20px; }
       }
       @media (min-width: 768px) {
-        .hero-title { font-size: var(--text-hero) !important; }
+        .hero-title { font-size: 4rem !important; }
         .step-connector-vertical-wrap { display: none !important; }
       }
 
       /* ── Section spacing ── */
       .section-padding {
-        padding: var(--space-4xl) var(--space-xl);
+        padding: var(--space-3xl) var(--space-xl);
       }
       @media (min-width: 768px) {
         .section-padding {
@@ -737,16 +792,20 @@
           <div class="hero-text-col">
             <div class="section-animate">
               <div class="logo-badge">
-                <img src="../assets/brand-logo.jpg" alt="你造吗 Logo">
+                <img src="assets/brand-logo.jpg" alt="你造吗 Logo">
               </div>
             </div>
 
-            <h1 class="hero-title section-animate delay-1" style="font-size:3.25rem;font-weight:900;color:#fff;line-height:1.2;margin-bottom:var(--space-lg);">
+            <div class="section-animate delay-1">
+              <div class="hero-tagline-pill">AI + 你的照片 = 无限 IP 资产</div>
+            </div>
+
+            <h1 class="hero-title section-animate delay-1" style="font-size:4rem;font-weight:900;color:#fff;line-height:1.15;margin-bottom:var(--space-lg);">
               上传照片<br>
               造出你的<span class="zao-glow" style="position:relative;">专属 IP</span>
             </h1>
 
-            <p class="section-animate delay-2" style="font-size:var(--text-xl);font-weight:600;color:rgba(255,255,255,0.88);margin-bottom:var(--space-2xl);line-height:var(--leading-relaxed);max-width:400px;">
+            <p class="section-animate delay-2" style="font-size:var(--text-xl);font-weight:600;color:rgba(255,255,255,0.88);margin-bottom:var(--space-2xl);line-height:var(--leading-relaxed);max-width:440px;">
               不是生成一张头像那么简单。<br>
               <span class="zao-underline" style="font-family:var(--font-display);font-weight:800;">你造吗</span>？让照片里的 TA 变成可以被喜欢、被分享、被持续运营的角色资产。
             </p>
@@ -765,7 +824,7 @@
           <!-- Right: Illustration + floating stickers -->
           <div class="hero-visual-col section-animate delay-2">
             <div class="hero-illustration">
-              <img src="../assets/hero-visual.jpg" alt="你造吗 产品示意">
+              <img src="assets/hero-visual.jpg" alt="你造吗 产品示意">
             </div>
             <div class="hero-sticker hero-sticker-1">🎭</div>
             <div class="hero-sticker hero-sticker-2">😂</div>
@@ -797,7 +856,7 @@
         <div class="deco-blob" style="width:600px;height:600px;background:radial-gradient(circle,rgba(255,107,0,0.06),transparent 70%);top:-100px;right:-150px;"></div>
         <div class="deco-blob" style="width:400px;height:400px;background:radial-gradient(circle,rgba(255,184,0,0.05),transparent 70%);bottom:-50px;left:-100px;"></div>
 
-        <div style="max-width:1080px;margin:0 auto;position:relative;z-index:1;">
+        <div style="max-width:1120px;margin:0 auto;position:relative;z-index:1;">
           <div style="text-align:center;margin-bottom:var(--space-3xl);">
             <span class="section-label section-animate">WHY</span>
             <h2 class="section-animate delay-1" style="font-size:var(--text-4xl);font-weight:900;color:var(--color-text-primary);">
@@ -805,10 +864,11 @@
             </h2>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Pain 1 -->
-            <div class="pain-card accent-bar-coral section-animate delay-2">
-              <div style="font-size:40px;text-align:center;margin-bottom:var(--space-md);">🐱</div>
+            <div class="pain-card section-animate delay-2" style="border-top:4px solid var(--color-accent-coral); background: linear-gradient(145deg, #FFFFFF 0%, #FFF5F5 100%);">
+              <span class="pain-card-number">01</span>
+              <span class="pain-card-emoji">🐱</span>
               <h3 style="font-size:var(--text-xl);font-weight:800;text-align:center;margin-bottom:var(--space-sm);color:var(--color-text-primary);">
                 想给宠物做表情包
               </h3>
@@ -817,8 +877,9 @@
               </p>
             </div>
             <!-- Pain 2 -->
-            <div class="pain-card accent-bar-amber section-animate delay-3">
-              <div style="font-size:40px;text-align:center;margin-bottom:var(--space-md);">🧑‍🎨</div>
+            <div class="pain-card section-animate delay-3" style="border-top:4px solid var(--color-accent-warm); background: linear-gradient(145deg, #FFFFFF 0%, #FFFBF0 100%);">
+              <span class="pain-card-number">02</span>
+              <span class="pain-card-emoji">🧑‍🎨</span>
               <h3 style="font-size:var(--text-xl);font-weight:800;text-align:center;margin-bottom:var(--space-sm);color:var(--color-text-primary);">
                 想要个人专属形象
               </h3>
@@ -827,8 +888,9 @@
               </p>
             </div>
             <!-- Pain 3 -->
-            <div class="pain-card accent-bar-mint section-animate delay-4">
-              <div style="font-size:40px;text-align:center;margin-bottom:var(--space-md);">🏪</div>
+            <div class="pain-card section-animate delay-4" style="border-top:4px solid var(--color-accent-mint); background: linear-gradient(145deg, #FFFFFF 0%, #F0FDF9 100%);">
+              <span class="pain-card-number">03</span>
+              <span class="pain-card-emoji">🏪</span>
               <h3 style="font-size:var(--text-xl);font-weight:800;text-align:center;margin-bottom:var(--space-sm);color:var(--color-text-primary);">
                 小品牌想做吉祥物
               </h3>
@@ -851,7 +913,7 @@
       <!--  Section 3: Product Flow                  -->
       <!-- ════════════════════════════════════════ -->
       <section style="background:var(--color-primary-bg-soft);" class="section-padding">
-        <div style="max-width:1080px;margin:0 auto;">
+        <div style="max-width:1120px;margin:0 auto;">
           <div style="text-align:center;margin-bottom:var(--space-3xl);">
             <span class="section-label section-animate">HOW</span>
             <h2 class="section-animate delay-1" style="font-size:var(--text-4xl);font-weight:900;color:var(--color-text-primary);">
@@ -860,14 +922,16 @@
           </div>
 
           <!-- Steps: horizontal on desktop, vertical on mobile -->
-          <div class="flex flex-col md:flex-row items-center md:items-start justify-center gap-6 lg:gap-4">
+          <div class="flex flex-col md:flex-row items-center md:items-start justify-center gap-6">
 
             <!-- Step 1 -->
-            <div class="step-card section-animate delay-1 flex-1 w-full md:w-auto" style="max-width:240px;">
+            <div class="step-card step-tint-warm section-animate delay-1 flex-1 w-full md:w-auto" style="max-width:260px;">
               <div class="flex flex-col items-center md:items-start gap-3">
                 <div class="flex items-center gap-3 w-full">
                   <div class="step-number">1</div>
-                  <h3 style="font-size:var(--text-lg);font-weight:800;color:var(--color-text-primary);">📸 上传照片</h3>
+                  <h3 style="font-size:var(--text-lg);font-weight:800;color:var(--color-text-primary);">
+                    <span class="step-emoji">📸</span> 上传照片
+                  </h3>
                 </div>
                 <p style="font-size:var(--text-sm);color:var(--color-text-secondary);line-height:var(--leading-relaxed);margin:0;">
                   上传人物、宠物或物品照片
@@ -888,11 +952,13 @@
             </div>
 
             <!-- Step 2 -->
-            <div class="step-card section-animate delay-2 flex-1 w-full md:w-auto" style="max-width:240px;">
+            <div class="step-card step-tint-mint section-animate delay-2 flex-1 w-full md:w-auto" style="max-width:260px;">
               <div class="flex flex-col items-center md:items-start gap-3">
                 <div class="flex items-center gap-3 w-full">
                   <div class="step-number">2</div>
-                  <h3 style="font-size:var(--text-lg);font-weight:800;color:var(--color-text-primary);">🎭 建立人设</h3>
+                  <h3 style="font-size:var(--text-lg);font-weight:800;color:var(--color-text-primary);">
+                    <span class="step-emoji">🎭</span> 建立人设
+                  </h3>
                 </div>
                 <p style="font-size:var(--text-sm);color:var(--color-text-secondary);line-height:var(--leading-relaxed);margin:0;">
                   填写性格、口头禅和喜好
@@ -913,11 +979,13 @@
             </div>
 
             <!-- Step 3 -->
-            <div class="step-card section-animate delay-3 flex-1 w-full md:w-auto" style="max-width:240px;">
+            <div class="step-card step-tint-lavender section-animate delay-3 flex-1 w-full md:w-auto" style="max-width:260px;">
               <div class="flex flex-col items-center md:items-start gap-3">
                 <div class="flex items-center gap-3 w-full">
                   <div class="step-number">3</div>
-                  <h3 style="font-size:var(--text-lg);font-weight:800;color:var(--color-text-primary);">✨ 生成 IP</h3>
+                  <h3 style="font-size:var(--text-lg);font-weight:800;color:var(--color-text-primary);">
+                    <span class="step-emoji">✨</span> 生成 IP
+                  </h3>
                 </div>
                 <p style="font-size:var(--text-sm);color:var(--color-text-secondary);line-height:var(--leading-relaxed);margin:0;">
                   AI 生成专属 IP 角色形象
@@ -938,11 +1006,13 @@
             </div>
 
             <!-- Step 4 -->
-            <div class="step-card section-animate delay-4 flex-1 w-full md:w-auto" style="max-width:240px;">
+            <div class="step-card step-tint-sky section-animate delay-4 flex-1 w-full md:w-auto" style="max-width:260px;">
               <div class="flex flex-col items-center md:items-start gap-3">
                 <div class="flex items-center gap-3 w-full">
                   <div class="step-number">4</div>
-                  <h3 style="font-size:var(--text-lg);font-weight:800;color:var(--color-text-primary);">🎁 持续开造</h3>
+                  <h3 style="font-size:var(--text-lg);font-weight:800;color:var(--color-text-primary);">
+                    <span class="step-emoji">🎁</span> 持续开造
+                  </h3>
                 </div>
                 <p style="font-size:var(--text-sm);color:var(--color-text-secondary);line-height:var(--leading-relaxed);margin:0;">
                   表情包、壁纸、红包封面...无限衍生
@@ -972,7 +1042,7 @@
         <div style="position:absolute;bottom:200px;right:25%;width:6px;height:6px;border-radius:50%;background:var(--color-accent-warm);opacity:0.3;z-index:0;"></div>
         <div style="position:absolute;top:40%;left:5%;width:14px;height:14px;border-radius:50%;background:var(--color-primary-bg);z-index:0;"></div>
 
-        <div style="max-width:1080px;margin:0 auto;position:relative;z-index:1;">
+        <div style="max-width:1120px;margin:0 auto;position:relative;z-index:1;">
           <div style="text-align:center;margin-bottom:var(--space-3xl);">
             <span class="section-label section-animate">WHAT</span>
             <h2 class="section-animate delay-1" style="font-size:var(--text-4xl);font-weight:900;color:var(--color-text-primary);">
@@ -983,10 +1053,10 @@
             </p>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Feature 1 -->
-            <div class="feature-card card-tint-warm section-animate delay-1">
-              <span class="feature-emoji">🎭</span>
+            <div class="feature-card section-animate delay-1">
+              <div class="feature-icon-circle circle-warm">🎭</div>
               <h3 style="font-size:var(--text-xl);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-sm);">
                 IP 主形象
               </h3>
@@ -995,8 +1065,8 @@
               </p>
             </div>
             <!-- Feature 2 -->
-            <div class="feature-card card-tint-mint section-animate delay-2">
-              <span class="feature-emoji">😂</span>
+            <div class="feature-card section-animate delay-2">
+              <div class="feature-icon-circle circle-coral">😂</div>
               <h3 style="font-size:var(--text-xl);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-sm);">
                 表情包套装
               </h3>
@@ -1005,8 +1075,8 @@
               </p>
             </div>
             <!-- Feature 3 -->
-            <div class="feature-card card-tint-lavender section-animate delay-3">
-              <span class="feature-emoji">📋</span>
+            <div class="feature-card section-animate delay-3">
+              <div class="feature-icon-circle circle-lavender">📋</div>
               <h3 style="font-size:var(--text-xl);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-sm);">
                 角色人设卡
               </h3>
@@ -1015,8 +1085,8 @@
               </p>
             </div>
             <!-- Feature 4 -->
-            <div class="feature-card card-tint-warm section-animate delay-4">
-              <span class="feature-emoji">🎄</span>
+            <div class="feature-card section-animate delay-4">
+              <div class="feature-icon-circle circle-amber">🎄</div>
               <h3 style="font-size:var(--text-xl);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-sm);">
                 节日海报
               </h3>
@@ -1025,8 +1095,8 @@
               </p>
             </div>
             <!-- Feature 5 -->
-            <div class="feature-card card-tint-mint section-animate delay-5">
-              <span class="feature-emoji">📱</span>
+            <div class="feature-card section-animate delay-5">
+              <div class="feature-icon-circle circle-mint">📱</div>
               <h3 style="font-size:var(--text-xl);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-sm);">
                 周边 Mockup
               </h3>
@@ -1035,8 +1105,8 @@
               </p>
             </div>
             <!-- Feature 6 -->
-            <div class="feature-card card-tint-lavender section-animate delay-6">
-              <span class="feature-emoji">🖼️</span>
+            <div class="feature-card section-animate delay-6">
+              <div class="feature-icon-circle circle-sky">🖼️</div>
               <h3 style="font-size:var(--text-xl);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-sm);">
                 社交封面
               </h3>
@@ -1059,7 +1129,7 @@
       <!--  Section 5: Who Is This For               -->
       <!-- ════════════════════════════════════════ -->
       <section style="background:var(--color-primary-bg-soft);" class="section-padding">
-        <div style="max-width:1080px;margin:0 auto;">
+        <div style="max-width:1120px;margin:0 auto;">
           <div style="text-align:center;margin-bottom:var(--space-3xl);">
             <span class="section-label section-animate">WHO</span>
             <h2 class="section-animate delay-1" style="font-size:var(--text-4xl);font-weight:900;color:var(--color-text-primary);">
@@ -1067,45 +1137,45 @@
             </h2>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- User 1 -->
             <div class="user-badge section-animate delay-2" style="border-left-color:var(--color-accent-coral);">
-              <div style="font-size:40px;margin-bottom:var(--space-md);">🐾</div>
+              <span class="user-badge-emoji">🐾</span>
               <h3 style="font-size:var(--text-xl);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-sm);">
                 养宠人群
               </h3>
               <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;line-height:var(--leading-relaxed);">
-                把毛孩子变成专属表情包
+                把毛孩子变成专属表情包，在朋友圈独领风骚
               </p>
             </div>
             <!-- User 2 -->
             <div class="user-badge section-animate delay-3" style="border-left-color:var(--color-accent-warm);">
-              <div style="font-size:40px;margin-bottom:var(--space-md);">👤</div>
+              <span class="user-badge-emoji">👤</span>
               <h3 style="font-size:var(--text-xl);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-sm);">
                 社交达人
               </h3>
               <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;line-height:var(--leading-relaxed);">
-                拥有独一无二的个人形象
+                拥有独一无二的个人形象，让社交更有辨识度
               </p>
             </div>
             <!-- User 3 -->
             <div class="user-badge section-animate delay-4" style="border-left-color:var(--color-accent-mint);">
-              <div style="font-size:40px;margin-bottom:var(--space-md);">📱</div>
+              <span class="user-badge-emoji">📱</span>
               <h3 style="font-size:var(--text-xl);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-sm);">
                 内容创作者
               </h3>
               <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;line-height:var(--leading-relaxed);">
-                快速建立个人视觉 IP
+                快速建立个人视觉 IP，提升品牌辨识度和粉丝粘性
               </p>
             </div>
             <!-- User 4 -->
             <div class="user-badge section-animate delay-5" style="border-left-color:var(--color-accent-lavender);">
-              <div style="font-size:40px;margin-bottom:var(--space-md);">🏷️</div>
+              <span class="user-badge-emoji">🏷️</span>
               <h3 style="font-size:var(--text-xl);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-sm);">
                 小品牌商家
               </h3>
               <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;line-height:var(--leading-relaxed);">
-                低成本打造品牌吉祥物
+                低成本打造品牌吉祥物，省下设计团队的高额费用
               </p>
             </div>
           </div>
@@ -1123,30 +1193,50 @@
       <!--  Section 6: TRAE AI Collaboration         -->
       <!-- ════════════════════════════════════════ -->
       <section style="background:var(--color-bg);position:relative;overflow:hidden;" class="section-padding">
-        <!-- Dot pattern background -->
-        <div style="position:absolute;inset:0;background-image:radial-gradient(circle,var(--color-border-light) 1px,transparent 1px);background-size:24px 24px;z-index:0;"></div>
+        <!-- Dot-grid pattern background -->
+        <div class="dot-grid-bg" style="position:absolute;inset:0;z-index:0;"></div>
 
-        <div style="max-width:1080px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+        <div style="max-width:1120px;margin:0 auto;text-align:center;position:relative;z-index:1;">
           <h2 class="section-animate" style="font-size:var(--text-4xl);font-weight:900;margin-bottom:var(--space-3xl);color:var(--color-text-primary);">
             全程使用 TRAE AI 协作开发
           </h2>
 
-          <div class="flex flex-wrap justify-center gap-4">
-            <div class="dev-badge section-animate delay-1">
-              <span style="font-size:24px;">💬</span>
-              <span>多轮对话迭代产品设计</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="trae-card section-animate delay-1">
+              <span class="trae-card-icon">💬</span>
+              <h3 style="font-size:var(--text-base);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-xs);">
+                多轮对话迭代
+              </h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;line-height:var(--leading-relaxed);">
+                通过对话反复打磨产品设计方向与功能细节
+              </p>
             </div>
-            <div class="dev-badge section-animate delay-2">
-              <span style="font-size:24px;">✍️</span>
-              <span>AI 协作生成文案与方案</span>
+            <div class="trae-card section-animate delay-2">
+              <span class="trae-card-icon">✍️</span>
+              <h3 style="font-size:var(--text-base);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-xs);">
+                AI 文案与方案
+              </h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;line-height:var(--leading-relaxed);">
+                AI 协助生成产品文案、营销方案与用户话术
+              </p>
             </div>
-            <div class="dev-badge section-animate delay-3">
-              <span style="font-size:24px;">🎨</span>
-              <span>AI 辅助 UI 设计</span>
+            <div class="trae-card section-animate delay-3">
+              <span class="trae-card-icon">🎨</span>
+              <h3 style="font-size:var(--text-base);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-xs);">
+                AI 辅助 UI 设计
+              </h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;line-height:var(--leading-relaxed);">
+                从配色、排版到交互动效，AI 全程参与视觉设计
+              </p>
             </div>
-            <div class="dev-badge section-animate delay-4">
-              <span style="font-size:24px;">💻</span>
-              <span>TRAE 辅助前端开发</span>
+            <div class="trae-card section-animate delay-4">
+              <span class="trae-card-icon">💻</span>
+              <h3 style="font-size:var(--text-base);font-weight:800;color:var(--color-text-primary);margin-bottom:var(--space-xs);">
+                TRAE 前端开发
+              </h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;line-height:var(--leading-relaxed);">
+                TRAE 辅助编写前端代码，快速实现页面开发与部署
+              </p>
             </div>
           </div>
         </div>
@@ -1169,13 +1259,12 @@
       <!--  Section 7: CTA / Footer                  -->
       <!-- ════════════════════════════════════════ -->
       <section class="hero-gradient section-padding flex flex-col items-center justify-center text-center relative overflow-hidden" style="min-height:70vh;">
-        <!-- Floating decorative shapes -->
+        <!-- Floating decorative blurred shapes -->
         <div class="cta-float-1"></div>
         <div class="cta-float-2"></div>
         <div class="cta-float-3"></div>
-        <div class="cta-float-4"></div>
 
-        <h2 class="section-animate zao-glow" style="font-family:var(--font-display);font-size:var(--text-5xl);font-weight:900;color:#fff;margin-bottom:var(--space-md);position:relative;z-index:1;">
+        <h2 class="section-animate zao-glow" style="font-family:var(--font-display);font-size:3.5rem;font-weight:900;color:#fff;margin-bottom:var(--space-md);position:relative;z-index:1;">
           你造吗？
         </h2>
         <p class="section-animate delay-1" style="font-size:var(--text-xl);font-weight:600;color:rgba(255,255,255,0.9);margin-bottom:var(--space-3xl);position:relative;z-index:1;">
